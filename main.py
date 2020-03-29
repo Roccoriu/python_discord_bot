@@ -3,7 +3,7 @@ import os
 from random import *
 
 import discord
-from discord.ext import commands, tasks
+from discord.ext import commands
 
 
 client = commands.Bot(command_prefix = '.')
@@ -20,11 +20,6 @@ async def unload(ctx, extension):
     client.unload_extension(f'bin.{extension}')
 
 
-@tasks.loop(seconds = 10)
-async def change_status():
-    pass
-
-
 
 for filename in os.listdir('./bin'):
     if filename.endswith('.py'):
@@ -32,4 +27,4 @@ for filename in os.listdir('./bin'):
 
 
 
-client.run('NDU2NDI5ODM1MzcyMzMxMDEx.Xn88dw.S-rm7cjPJUmsT0M15MYEJDqMrZs')
+client.run('')
